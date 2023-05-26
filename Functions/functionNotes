@@ -1,0 +1,72 @@
+FUNCTION IS A BLOCK OF CODE WHICH HAS SOME NAME FOR IDENTIFICATION.
+
+
+//Function definition
+functionName()
+{
+    code goes here;
+}
+
+
+FUNCTION:
+1. Even in the smallest C program there is at least one function called main function.
+2. All the function names must be unique.
+3. One function name must be main().
+4. You can define functions in any sequence.
+5. Operating system calls main() function to begin for execution of program.
+
+
+Function are of two type:
+1. PreDefined Functions.
+2. UserDefined Functions.
+
+
+Ways to define a function:
+1. Takes Nothing and Returns Nothing. (TNRS)
+2. Takes Something and Returns Nothing. (TSRN)
+3. Takes Nothing and Returns Something. (TNRS)
+4. Takes Something and Returns Something. (TSRS)
+
+
+1. TNRN
+void add()
+{
+    int a,b;
+    printf("ENter two nums: ");
+    scanf("%d %d", &a,&b);
+    printf("Sum is %d",a+b);
+}
+
+
+2. TSRN
+void add(int a, int b)
+{
+    printf("Sum is %d",a+b);
+}
+
+
+3. TNRS
+int add()
+{
+    int a,b;
+    printf("ENter two nums: ");
+    scanf("%d %d", &a,&b);
+    return a+b;   
+}
+
+
+4. TSRS
+int add(int a , int b)
+{
+    return a+b;
+}
+
+
+Return keyword:
+1. It returns value.
+2. It returns control to the calling function.
+3. We cannot return more than one value using return keyword.
+4. We can only use one return keyword in each function.
+
+
+ 
