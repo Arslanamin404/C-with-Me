@@ -77,6 +77,10 @@ int main()
         printf("\n---------------------------------------------------\n");
     }
 
+    
+    printf("\nPress Any key to continue to do search operations....\n");
+    getch();
+    
     int year;
     printf("\nEnter the year to get the name of students joined in that particular year.\nYear: ");
     scanf("%d", &year);
