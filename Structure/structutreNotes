@@ -1,0 +1,75 @@
+STRUCTURE INTRODUCTION
+1. STRUCTURE is a method of groping variables.
+2. STRUCTURE is a collection of Heterogeneous elements.
+3. STRUCTURE is a user-defined/derived datatype.
+
+SYNTAX:
+struct datatypeName
+{
+    //create or declare variables.
+};
+
+Examples:
+struct date
+{
+    int date, month, year;
+};
+
+struct Book
+{
+    int bookID;
+    char title[30];
+    float price;
+};
+
+struct Employee
+{
+    int Employee_ID;
+    char Employee_Name[40];
+    char designation[30];
+    float salary;
+};
+
+STRUCTURES can be defined both as GLOBALLY as well as LOCALLY:
+1. If the structure is defined outside the function whether it is main() or any other function(), it is said to be structure is Globally defined and can be accessed anywhere in the program.
+2. If the structure is defined inside any function of the program, it is said to be structure is locally defined and is accessible only inside that particular function.
+
+STRUCTURE VARIABLE DELECTATION:
+struct date
+{
+    int d,m,y;
+}d1,d2;
+//d1 and d2 are two variables of struct date datatype.
+
+         OR
+
+struct date
+{
+    int d,m,y;
+};
+void function(){
+    struct date d1,d2;
+    //code;
+}
+
+HOW TO INITIALIZE STRUCTURE MEMBER VARIABLES DURING DECELERATION?
+struct date = {28,3,2023};
+//28 wil be stored in d, 3 in m and 2023 in y.
+
+Members of structure are accessed with the help of dot (.) operator also known as 'member access operator'.
+Eg: printf("%d-%d-%d", d1.d, d1.m, d1.y);
+// output -->  28-3-2023
+// structureVariable.memberName;
+
+
+TAKING USER INPUT:
+struct date d2;
+printf("Enter you DOB? (dd-mm-yyyy)");
+scanf("%d %d %d", &d2.date, &d2.m, &d2.y);
+printf("%d-%d-%d", d2.date, d2.m, d2.y)
+//output --> 05-3-2003
+
+
+fflush(stdin); is used to clear input buffer.
+If we do not use fflush(stdin), when we were hitting enter it was storing that value in new variable.
+As we know Enter Key is combination of two keys(new line and carriage return).
