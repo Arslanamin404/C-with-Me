@@ -66,16 +66,16 @@ int main()
 void sortStudent(struct students *student, int size)
 {
     // sorting on the bases of marks obtained
-    float temp;
+    struct students temp;
     for (int i = 0; i < size - 1; i++)
     {
         for (int j = i + 1; j < size; j++)
         {
             if (student[i].marks < student[j].marks)
             {
-                temp = student[j].marks;
-                student[j].marks = student[i].marks;
-                student[i].marks = temp;
+                temp = student[j];
+                student[j] = student[i];
+                student[i]= temp;
             }
         }
     }
