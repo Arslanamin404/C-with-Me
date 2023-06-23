@@ -1,0 +1,5 @@
+Between Selection sort and Bubble sort, Selection sort is generally considered most efficient.
+In terms of performance selection sort is generally prefered over bubble sort because it typically requires fewer swaps.
+However its important to note that both of them are not efficient sorting algorithms especially for larger lists.
+
+Among Selection sort, Bubble sort and Insertion sort, Insertion sort is generally considered most efficient in terms of average case performance.
