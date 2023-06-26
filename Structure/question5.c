@@ -43,8 +43,10 @@ void main()
 
         printf("List of cricketers with their Name, Age , Number of Test Matches Played, in ascending order of average runs scored.\n");
 
-        printf("\n|-------------------------------------------------------------|\n");
-
+        printf("\n|---------------------------------------------------------------------------------|\n");
+        printf("| NAME\t\t\t\tAGE\t\t  MATCHES\t\t  AVERAGE |");
+        printf("\n|---------------------------------------------------------------------------------|\n");
+        
         printStruct(cricketer, size);
 
         printf("\n\nDo you want to run again this program? Press any key to continue and 0 to exit.\n");
@@ -97,7 +99,7 @@ void printStruct(record *cricketer, int size)
 {
     for (int i = 0; i < size; i++)
     {
-        printf("|  %-30s %-10d %-10d %-6.2f|\n", cricketer[i].name, cricketer[i].age, cricketer[i].noOfTestMatches, cricketer[i].avg);
-        printf("|-------------------------------------------------------------|\n");
+        printf("| %-30s %-20d %-20d %-6.2f |\n", cricketer[i].name, cricketer[i].age, cricketer[i].noOfTestMatches, cricketer[i].avg);
+        printf("|---------------------------------------------------------------------------------|\n");
     }
 }
