@@ -1,3 +1,16 @@
+/*
+* Write a program to sort the list of date of births of people in ascending order of years, months, dates respectively.
+
+* If the date inputted by user is incorrect, dont print that value to output screen.
+
+todo: If the year of two people was same, then cheka for Month, if both month and year was same then check for date.
+
+! Store the following data in date structure:
+! Date
+! Month
+! Year
+*/
+
 #include <stdio.h>
 #include <conio.h>
 #include <stdlib.h>
@@ -28,6 +41,7 @@ int main()
 
         struct dates dob[size];
 
+        printf("---------------------\n\n");
         printf("Enter Your DOB's (DD-MM-YYYY) here: ");
         printf("\n--------------------------------------\n");
 
@@ -39,17 +53,19 @@ int main()
 
         sortDob(dob, size);
 
-        printf("\nS.No\tName\t\tDD-MM-YYYY");
-        printf("\n--------------------------------------\n");
+        printf("\n| --------------------------------------------------------- |\n");
+        printf("| S.No\t\tNAME\t\t\t\tDD-MM-YYYY  |");
+        printf("\n| --------------------------------------------------------- |\n");
 
         printDob(dob, size);
 
-        printf("--------------------------------------\n");
+        printf("| --------------------------------------------------------- |\n");
+
         printf("\nDo you want to run again this program? Press any key to continue and 0 to exit.\n");
         printf("Enter your choice: ");
         scanf("%d", &exit);
 
-        if(exit == 0)
+        if (exit == 0)
         {
             printf("\nThank you! Have a great time ahead. We hope you enjoyed using our program and didn't face any difficulties.\nVisit us again\nRegards: Future Gen\n\n");
         }
@@ -77,7 +93,7 @@ void takeInput(struct dates *dob, int size)
 
         printf("YYYY: ");
         scanf("%d", &dob[i].yyyy);
-        printf("----------------------------\n");
+        printf("------------------------------------------------------------\n");
     }
 }
 
@@ -122,8 +138,12 @@ void printDob(struct dates *dob, int size)
     {
         if (dob[i].dd < 0 || dob[i].dd > 31 || dob[i].mm < 0 || dob[i].mm > 12 || dob[i].yyyy > 2023)
         {
-            return;
+            // printf("\t\tInvalid Date\n");
+            return; //wrong dates will not be printed
         }
-        printf("%d\t%s\t\t%d-%d-%d\n", i + 1, dob[i].name, dob[i].dd, dob[i].mm, dob[i].yyyy);
+        else
+        {
+            printf("|  %-13d %-30s %3d-%d-%d  |\n", i + 1, dob[i].name, dob[i].dd, dob[i].mm, dob[i].yyyy);
+        }
     }
 }
