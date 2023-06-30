@@ -5,17 +5,15 @@
 int main()
 {
     int number;
-    
-    srand(time(0));        // this will generate different number every time we run the program.
 
-    number = rand() % 100; // this will generate random num between 1-100.
-    
-    printf("Random number is: %d", number);
+    srand(time(NULL)); // INITIALIZING THE RANDOM NUMBER GENERATOR
+    printf("Ten Random numbers from (1 - 100): \n");
 
     // this will generate 10 random numbers.
-    for (int i = 0; i < 10; i++)
+    for (int i = 1; i <= 10; i++)
     {
-        number = rand(); // generate a random number
+        number = rand() % 100; // this will generate random num between 1-100.
+
         printf("%d\n", number);
     }
     return 0;
