@@ -3,15 +3,12 @@
 #include <conio.h>
 int main()
 {
-    int a = 8, j, i, result, sum;
-    for (i = 1; i <= 10; i++)
+    int result = 0, sum =0;
+    for (int i = 1; i <= 10; i++)
     {
-        result = a * i;  //this will print table of 8.
+        result = 8 * i;  //this will print table of 8.
 
-        for (j = 1; j<=1 ; j++)
-        {
-            sum = sum + result;
-        }
+        sum += result;
     }
     printf("sum of multiples of 8 from 1-10 is: %d", sum);
     getch();
