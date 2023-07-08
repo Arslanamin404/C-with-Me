@@ -1,0 +1,5 @@
+/*
+ * Using pointers in function name `int computerChoice()` etc, enables us to return dynamically allocated string.
+ * Using pointers in array name (` char *RPS[ ] `), allows us to work with array of string pointers,
+ * providing flexibility and efficiency in storing and accessing string.
+ */
