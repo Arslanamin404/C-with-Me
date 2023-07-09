@@ -21,5 +21,5 @@ you'd like to share with others, feel free to submit a pull request. By collabor
 extensive collection of C language programs and projects that benefit the programming community as a whole.
 
 - ## Contact:
-**[Email](arslanamin.org@gmail.com)**
+**[Email](mailto:arslanamin.org@gmail.com)**
 **[Instagram](https://instagram.com/_.arsl_an)**
