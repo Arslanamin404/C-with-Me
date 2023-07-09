@@ -4,7 +4,11 @@ void swap_callByReference(int *a, int *b);
 void swap_callByValue(int a, int b);
 int main()
 {
-    printf("\n--------------------------------------\n");
+   /*
+UNDERSTAND SWAPING USING KITCHEN PROBLEM
+YOU HAVE 2 GLASSES 1 OF WATER AND THE OTHER 1 OF MILK NOW YOU HAVE TO INTERCHAGE THE CONTAINER OF MILK AND WATER.
+WE KNOW WE WILL REQUIRE 3RD GLASS TO INTERCHAGE THEIR CONTAINER AND SO ON.
+*/ printf("\n--------------------------------------\n");
 
     int num1, num2;
     printf("Enter two numbers: ");
