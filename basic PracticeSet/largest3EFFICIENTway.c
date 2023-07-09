@@ -61,7 +61,7 @@ APPROACH 03 :
     
 //APPROACH 04 : 
     
-    printf("%d", (a>b)? (a>c)? a:c : (b>c)? b:c);
+    printf("Largest number is %d", (a>b)? (a>c)? a:c : (b>c)? b:c);
 getch();
 
 }
