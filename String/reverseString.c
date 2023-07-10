@@ -1,17 +1,19 @@
 #include <stdio.h>
 #include <string.h>
 
-void strRev(char *str)
+// Function to reverse the characters in the array
+void arrRev(char *arr)
 {
-    int length = strlen(str);
+    int length = strlen(arr);
     char temp;
     for (int i = 0; i < length / 2; i++)
     {
-        temp = str[i];
-        str[i] = str[length - 1 - i];
-        str[length - 1 - i] = temp;
+        temp = arr[i];
+        arr[i] = arr[length - 1 - i];
+        arr[length - 1 - i] = temp;
     }
 }
+
 int main()
 {
     int size;
@@ -22,16 +24,14 @@ int main()
     char str[size];
 
     printf("String: ");
-//sizeof(str)+1, to accomodate null character
-    fgets(str,sizeof(str)+1,stdin);  
-//replace newline generated using fgets with null character 
-    str[strcspn(str,"\n")] = '\0';
+    fgets(str, sizeof(str)+1, stdin);   // sizeof(str)+1, to accommodate null character
+    str[strcspn(str, "\n")] = '\0';     // Remove trailing newline character from fgets
 
-    printf("\nOriginal string: %s\n",str);
-    
-    strRev(str);
+    printf("\nOriginal string: %s\n", str);
 
-    printf("Reversed string: %s",str);
+    arrRev(str);   // Call the function to reverse the string
+
+    printf("Reversed string: %s", str);
 
     return 0;
 }
