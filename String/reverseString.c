@@ -22,7 +22,7 @@ int main()
     char str[size];
 
     printf("String: ");
-    gets(str);
+    fgets(str,size+1,stdin);  //for null character
 
     printf("\nOriginal string: %s\n",str);
     
