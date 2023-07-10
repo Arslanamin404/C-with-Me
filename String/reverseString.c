@@ -22,7 +22,11 @@ int main()
     char str[size];
 
     printf("String: ");
-    fgets(str,size+1,stdin);  //for null character
+    fgets(str,size+1,stdin);  
+//size+1 for null character
+
+    str[strcspn(str,"\n")] = '\0';
+//replace newline generated using fgets with null character 
 
     printf("\nOriginal string: %s\n",str);
     
