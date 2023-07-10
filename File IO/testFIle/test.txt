@@ -1,0 +1,18 @@
+This customer data has been generated from C program using File IO operations.
+Total customers added today: 10
+
+ID: 56325	Name: Arsalan	PhoneNumber: 7780880146
+ID: 987465	Name: Sheezan	PhoneNumber: 9541586639
+ID: 74554	Name: Farhan	PhoneNumber: 8491827267
+ID: 568971	Name: Burhan	PhoneNumber: 9541809618
+ID: 98545	Name: Muneeb	PhoneNumber: 7006656297
+ID: 79745	Name: Musaib	PhoneNumber: 8825094713
+ID: 789465	Name: Zain	PhoneNumber: 9906855410
+ID: 691240	Name: Zahid	PhoneNumber: 9906855410
+ID: 694564	Name: Qaiser	PhoneNumber: 7780943773
+ID: 789416	Name: Basit	PhoneNumber: 962293226
+
+This customer data has been generated from C program using File IO operations.
+Total customers added today: 1
+
+ID: 789123	Name: Faizan	PhoneNumber: 9149941459
