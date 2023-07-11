@@ -1,6 +1,4 @@
-/*
-****** THIS PROGRAM WILL GENERATE A MATRIX OF RANDOM UNIQUE NUMBERS******
-*/
+//* *******THIS PROGRAM WILL GENERATE A MATRIX OF RANDOM UNIQUE NUMBERS******
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
