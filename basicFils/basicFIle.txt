@@ -1,0 +1,12 @@
+Sure! Here's a demo text of 100 words:
+In a world filled with endless possibilities, she embarked on a journey of self-discovery.
+Armed with curiosity and a heart full of dreams, she ventured into uncharted territories,
+embracing the unknown. Along the way, she encountered diverse cultures, vibrant landscapes,
+and fascinating individuals who challenged her perspectives. Through moments of triumph and
+moments of despair, she found strength within herself, learning to navigate the highs and
+lows of life. With each step forward, she realized that the true essence of living lies in
+embracing the present and cherishing the connections that make us human. And so, she continued 
+to write her own extraordinary story."
+This content was added to this file using a C program by doing some input output operations.
+
+This content was added to this file using a C program by doing some input output operations.
