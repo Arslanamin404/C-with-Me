@@ -4,23 +4,32 @@
 #include <string.h>
 #include <windows.h>
 
+
+#define MAX_COMPANY_NAME_LENGTH 60
+#define MAX_ADDRESS_LENGTH 150
+#define MAX_CONTACT_NUMBER_LENGTH 11
+#define MAX_CUSTOMER_NAME_LENGTH 100
+#define MAX_CUSTOMER_ID_LENGTH 10
+#define MAX_ITEM_NAME_LENGTH 100
+
+
 typedef struct
 {
-    char companyName[60];
-    char address[150];
-    char contactNumber[11];
+    char companyName[MAX_COMPANY_NAME_LENGTH];
+    char address[MAX_ADDRESS_LENGTH];
+    char contactNumber[MAX_CONTACT_NUMBER_LENGTH];
 } companyDetails;
 
 typedef struct
 {
-    char customerName[100];
-    char customerID[10];
-    char customerNumber[11];
+    char customerName[MAX_CUSTOMER_NAME_LENGTH];
+    char customerID[MAX_CUSTOMER_ID_LENGTH];
+    char customerNumber[MAX_CONTACT_NUMBER_LENGTH];
 } customerDetails;
 
 typedef struct
 {
-    char itemName[80];
+    char itemName[MAX_ITEM_NAME_LENGTH];
     float price;
     int quantity;
 } product;
@@ -158,7 +167,7 @@ void generateInvoice(companyDetails *company, customerDetails *customer, product
     printf("\n--------------\n");
     for (int i = 0; i < numOfItems; i++)
     {
-        printf("%d. %s \t $%.2f x %d  =  $%0.2f\n", i + 1, items[i].itemName, items[i].price, items[i].quantity, items[i].price * items[i].quantity);
+        printf("%d. %-15s  $%.2f x %d  =  $%0.2f\n", i + 1, items[i].itemName, items[i].price, items[i].quantity, items[i].price * items[i].quantity);
         totalAmount = totalAmount + items[i].price * items[i].quantity;
     }
 
@@ -203,6 +212,9 @@ void writeInvoiceToFile(companyDetails *company, customerDetails *customer, prod
     fprintf(filePtr, "%s", "\n-------------------------------------------\n");
     fprintf(filePtr, "\tTotal Payable Amount: $%0.2f", totalAmount);
     fprintf(filePtr, "%s", "\n-------------------------------------------\n");
+    
     printf("\nInvoice Saved Successfully. Thank you for choosing Future Gen Corporations!\n");
     printf("Regards: Mohammad Arsalan Rather\n\n");
+
+    fclose(filePtr);
 }
