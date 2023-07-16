@@ -92,13 +92,13 @@ void addTask()
     fflush(stdin);
     if (numTasks >= MAX_TASKS)
     {
-        printf("\nDataBase Full! Maximum number of tasks reached.\n\n");
+        printf("\n\nDataBase Full! Maximum number of tasks reached.\n\n");
         Beep(2000, 600);
         printf("Press any key to continue. . .");
         getch();
         return;
     }
-    printf("\nEnter task name: ");
+    printf("\n\nEnter task name: ");
     fgets(tasks[numTasks].taskName, MAX_TASK_NAME_LENGTH, stdin);
     tasks[numTasks].taskName[strcspn(tasks[numTasks].taskName, "\n")] = '\0';
 
@@ -117,12 +117,12 @@ void viewTask()
 {
     if (numTasks < 1)
     {
-        printf("\nTask List is empty. Please add some tasks\n\n");
+        printf("\n\nTask List is empty. Please add some tasks\n\n");
         printf("Press any key to continue. . .");
         getch();
         return;
     }
-    printf("\nTasks: \n");
+    printf("\n\nTasks: \n");
     for (int i = 0; i < numTasks; i++)
     {
         printf("%d. Task: %s\n", i + 1, tasks[i].taskName);
@@ -144,14 +144,14 @@ void markTaskComplete()
 {
     if (numTasks < 1)
     {
-        printf("\nNo task found. Task list is empty\n");
+        printf("\n\nNo task found. Task list is empty.\n");
         printf("Please add some tasks first . . .");
         getch();
         return; // Exit the function if there are no tasks
     }
 
     int taskNumber;
-    printf("\nEnter the Task Number to mark as completed: ");
+    printf("\n\nEnter the Task Number to mark as completed: ");
     scanf("%d", &taskNumber);
 
     //! Adjust task number to match array indexing (subtract 1)
@@ -160,7 +160,7 @@ void markTaskComplete()
     if (taskNumber >= 0 && taskNumber < numTasks)
     {
         tasks[taskNumber].isCompleted = true; // Mark the task as completed
-        printf("\nTask Marked as complete!\n");
+        printf("\nTask \'%s\' Marked as complete!\n",tasks[taskNumber].taskName);
         printf("\nPress any key to continue. . .");
         getch();
     }
@@ -175,7 +175,7 @@ void markTaskComplete()
 void removeTask()
 {
     int taskNumber;
-    printf("\nEnter task number to remove: ");
+    printf("\n\nEnter task number to remove: ");
     scanf("%d", &taskNumber);
 
     //! Adjusting index to match array indexing (as index starts from 0)
@@ -202,7 +202,7 @@ void removeTask()
     else
     {
         Beep(3000, 600);
-        printf("\nInvalid Task Number. Please try again.\n");
+        printf("\n\nInvalid Task Number. Please try again.\n");
         printf("\nPress any key to continue. . .");
         getch();
     }
