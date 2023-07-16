@@ -1,5 +1,6 @@
 // ************************************************* TO-DO-LIST *************************************************
-//! NOW READ AND WRITE DATA TO FILES TO MAKE IT MORE ADVANCE
+//! READING AND WRITING DATA TO FILES HAS BEEN DONE.
+//*** NOW YOU CAN INCLUDE MORE FUNCTIONS TO IT, LIKE DELETING A TASK FROM FILE, MODIFYING A TASK ETC. 
 #include <stdio.h>
 #include <stdbool.h>
 #include <conio.h>
