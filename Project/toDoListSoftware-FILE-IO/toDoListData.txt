@@ -1,9 +1,3 @@
-Task Name: Buy Protien
-Description: Protien kahatam hoagya mass Gainer leloiu guyssss
-----------------------------------------------------------------------------------------
-Task Name: GPT
-Description: Avoid using GPT
-----------------------------------------------------------------------------------------
 Task Name: test
 Description: tester is testing
 ----------------------------------------------------------------------------------------
@@ -12,9 +6,6 @@ Description: newTester is testing You
 ---------------------------------------------------------------------------------------
 Task Name: a
 Description: a is a
----------------------------------------------------------------------------------------
-Task Name: he
-Description: he s he
 ---------------------------------------------------------------------------------------
 Task Name: b
 Description: b is being
