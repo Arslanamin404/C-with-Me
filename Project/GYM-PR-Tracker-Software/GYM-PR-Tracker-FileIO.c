@@ -204,15 +204,26 @@ void displayMenu()
     printf("5. Exit\t\t[5]\n\n");
     printf("Please enter your choice: ");
 }
+
 void displayRecord()
 {
     system("clear");
     FILE *fptr = fopen(FILENAME, "r");
-    char ch = fgetc(fptr);
-    while (ch != EOF)
+    /*
+    ! THIS WILL READ FROM FILE AND PRINT ON DISPLAY CHARACTER BY CHARACTER
+        char ch = fgetc(fptr);
+        while (ch != EOF)
+        {
+            printf("%c", ch);
+            ch = fgetc(fptr);
+        }
+    */
+    /*
+ ? THIS WILL READ FROM FILE AND PRINT ON DISPLAY LINE BY LINE AS WE KNOW FGETS() GETS TERMINATED WHEN NEW LINE IS ENCOUNTERED.*/
+    char str[50];
+    while (fgets(str, sizeof(str), fptr) != NULL)
     {
-        printf("%c", ch);
-        ch = fgetc(fptr);
+        printf("%s", str);
     }
 
     // these 4 lines are used instead of getch function
