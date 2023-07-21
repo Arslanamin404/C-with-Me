@@ -1,0 +1,54 @@
+Day: Monday
+BodyPart: Chest
+Number of Exercises: 3
+List of Exercises: 
+1. Plane Bench
+2. Incline Dumbel
+3. Decline Flies
+-------------------------------------------------------------------------------
+Date: 18-7-2023
+Day: Tuesday
+BodyPart: Back
+Number of Exercises: 3
+List of Exercises: 
+1. Dead Lift
+2. Lat Pull Down
+3. T-Bar
+-------------------------------------------------------------------------------
+Date: 19-7-2023
+Day: Wednesday
+BodyPart: Shoulder
+Number of Exercises: 3
+List of Exercises: 
+1. Dumbel Press
+2. Side Front Raises
+3. Shrugs
+-------------------------------------------------------------------------------
+Date: 20-7-2023Day: Thursday
+BodyPart: Triceps
+Number of Exercises: 3
+List of Exercises: 
+1. Skull Crush
+2. Kick Back
+3. Rope
+-------------------------------------------------------------------------------
+Date: 21-7-2023
+Day: Friday
+BodyPart: Biceps
+Number of Exercises: 4
+List of Exercises: 
+1. Plane Barbel
+2. Dumbel Curls
+3. Concentration
+4. Preacher
+-------------------------------------------------------------------------------
+Date: 22-7-2023
+Day: Saturday
+BodyPart: Legs
+Number of Exercises: 4
+List of Exercises: 
+1. Squats
+2. Leg Press
+3. Leg Extension
+4. Stiff Leg
+-------------------------------------------------------------------------------
