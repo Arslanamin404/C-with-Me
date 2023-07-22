@@ -43,6 +43,12 @@ int main()
     while (!feof(fptr))
     {
         student newRecord;
+        /*
+      *  "Name:" This part of the format string expects the literal string "Name: " to appear in the file
+      *  exactly as written. It is used to check if the line being read starts with "Name: ".
+      *  %49[^\n]: This part of the format string is called a scanset. It tells fscanf() to read characters
+      *  from the file until a newline character ('\n') is encountered or the maximum width of 49 characters
+      *  is reached. */
         // Read labels and data for each student record from the file
         if (fscanf(fptr, "Roll Number: %d\n", &newRecord.rollNum) == 1 &&
             fscanf(fptr, "Name: %49[^\n]\n", newRecord.name) == 1 &&
