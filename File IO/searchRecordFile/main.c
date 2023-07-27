@@ -241,6 +241,11 @@ void addData(int studentCount)
     fprintf(filePtr, "Course: %s\n", newRecord.course);
     fprintf(filePtr, "Programme: %s\n\n", newRecord.programme);
 
+     // Append the new record to the 'record' array
+    studentCount++;
+    record = (student *)realloc(record, studentCount * sizeof(student));
+    record[(studentCount)-1] = newRecord;
+    
     fclose(filePtr);
     printf("Record added successfully!");
 
