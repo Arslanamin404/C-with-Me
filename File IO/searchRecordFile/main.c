@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
+#define MAX_RECORDS 500
 #define FILE_NAME "studentData.txt"
 
 typedef struct
@@ -13,13 +14,13 @@ typedef struct
     char programme[50];
 } student;
 
-student *record = NULL; // Dynamic Array of type student to store the record of each student
-
+student record[MAX_RECORDS];
 // Function prototypes
 void menu();
 void printData(int studentCount);
 void search(int studentCount);
 void addData(int studentCount);
+void sort(int studentCount);
 
 int main()
 {
@@ -40,29 +41,17 @@ int main()
     int studentCount = 0;
 
     // Read student data from the file until the end of the file is reached
-    while (!feof(fptr))
+    while (studentCount < MAX_RECORDS && (fscanf(fptr, "Roll Number: %d\n", &record[studentCount].rollNum) == 1 &&
+                                          fscanf(fptr, "Name: %49[^\n]\n", record[studentCount].name) == 1 &&
+                                          fscanf(fptr, "Semester: %d\n", &record[studentCount].sem) == 1 &&
+                                          fscanf(fptr, "Course: %79[^\n]\n", record[studentCount].course) == 1 &&
+                                          fscanf(fptr, "Program: %49[^\n]\n", record[studentCount].programme) == 1))
     {
-        student newRecord;
-        /*
-      *  "Name:" This part of the format string expects the literal string "Name: " to appear in the file
-      *  exactly as written. It is used to check if the line being read starts with "Name: ".
-      *  %49[^\n]: This part of the format string is called a scanset. It tells fscanf() to read characters
-      *  from the file until a newline character ('\n') is encountered or the maximum width of 49 characters
-      *  is reached. */
-        // Read labels and data for each student record from the file
-        if (fscanf(fptr, "Roll Number: %d\n", &newRecord.rollNum) == 1 &&
-            fscanf(fptr, "Name: %49[^\n]\n", newRecord.name) == 1 &&
-            fscanf(fptr, "Semester: %d\n", &newRecord.sem) == 1 &&
-            fscanf(fptr, "Course: %79[^\n]\n", newRecord.course) == 1 &&
-            fscanf(fptr, "Program: %49[^\n]\n", newRecord.programme) == 1)
-        {
-            // Increase the studentCount and dynamically reallocate memory for the 'record' array
-            // to store the new student record
-            studentCount++;
-            record = (student *)realloc(record, studentCount * sizeof(student));
-            record[studentCount - 1] = newRecord;
-        }
+        // Increase the studentCount and dynamically reallocate memory for the 'record' array
+        // to store the new student record
+        studentCount++;
     }
+
     fclose(fptr);
 
     while (1)
@@ -72,6 +61,9 @@ int main()
         menu();
         int userChoice;
         scanf("%d", &userChoice);
+
+        sort(studentCount);
+
         switch (userChoice)
         {
         case 1:
@@ -103,23 +95,20 @@ int main()
             break;
         }
     }
-
-    // Free the memory allocated for the 'record' array when you're done with it.
-    free(record);
-
     return 0;
 }
 
 // Function to display the menu options
 void menu()
 {
-    printf("1. Print Student Record\n2. Search By Roll Number\n3. Add Student Record\n4. Exit\n\n");
+    printf("1. DISPLAY RECORD [1]\n2. SEARCH RECORD  [2]\n3. ADD RECORD     [3]\n4. EXIT\t\t  [4]\n\n");
     printf("Enter your choice: ");
 }
 
 // Function to print student data
 void printData(int studentCount)
 {
+    printf("\n\t\t-----------------------------------------------------------------------\n\n");
     // Print the details of each student
     for (int i = 0; i < studentCount; i++)
     {
@@ -223,7 +212,7 @@ void addData(int studentCount)
             return; // Return without appending data
         }
     }
-
+    studentCount++;
     FILE *filePtr = fopen(FILE_NAME, "a");
     if (filePtr == NULL)
     {
@@ -239,25 +228,10 @@ void addData(int studentCount)
     fprintf(filePtr, "Name: %s\n", newRecord.name);
     fprintf(filePtr, "Semester: %d\n", newRecord.sem);
     fprintf(filePtr, "Course: %s\n", newRecord.course);
-    fprintf(filePtr, "Programme: %s\n\n", newRecord.programme);
+    fprintf(filePtr, "Program: %s\n\n", newRecord.programme);
 
-    // Append the new record to the 'record' array
-    studentCount++;
-    // Create a temporary pointer to store the new array
-    student *temp = (student *)realloc(record, (studentCount) * sizeof(student));
-
-    // If the allocation is successful, assign the new array to the 'record' pointer
-    if (temp != NULL)
-    {
-        record = temp;
-    }
-    else
-    {
-        printf("Error: Failed to allocate memory.");
-    }
-    
     fclose(filePtr);
-    printf("Record added successfully!");
+    printf("\nRecord added successfully!");
 
     printf("\n\nPress any key to continue. . .");
     // Wait for user input before exit (simulating getch function on Unix-based systems)
@@ -266,4 +240,21 @@ void addData(int studentCount)
     getchar();             // read single character
     system("stty cooked"); // switch terminal back to cooked mode
     getchar();
+}
+
+void sort(int studentCount)
+{
+    student tempRecord;
+    for (int i = 0; i < studentCount - 1; i++)
+    {
+        for (int j = i + 1; j < studentCount; j++)
+        {
+            if (record[i].rollNum > record[j].rollNum)
+            {
+                tempRecord = record[j];
+                record[j] = record[i];
+                record[i] = tempRecord;
+            }
+        }
+    }
 }
