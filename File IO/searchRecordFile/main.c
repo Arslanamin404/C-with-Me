@@ -241,10 +241,20 @@ void addData(int studentCount)
     fprintf(filePtr, "Course: %s\n", newRecord.course);
     fprintf(filePtr, "Programme: %s\n\n", newRecord.programme);
 
-     // Append the new record to the 'record' array
+    // Append the new record to the 'record' array
     studentCount++;
-    record = (student *)realloc(record, studentCount * sizeof(student));
-    record[(studentCount)-1] = newRecord;
+    // Create a temporary pointer to store the new array
+    student *temp = (student *)realloc(record, (studentCount) * sizeof(student));
+
+    // If the allocation is successful, assign the new array to the 'record' pointer
+    if (temp != NULL)
+    {
+        record = temp;
+    }
+    else
+    {
+        printf("Error: Failed to allocate memory.");
+    }
     
     fclose(filePtr);
     printf("Record added successfully!");
