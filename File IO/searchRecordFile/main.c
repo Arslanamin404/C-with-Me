@@ -19,7 +19,7 @@ student record[MAX_RECORDS];
 void menu();
 void printData(int studentCount);
 void search(int studentCount);
-void addData(int studentCount);
+int addData(int studentCount);
 void sort(int studentCount);
 
 int main()
@@ -73,7 +73,7 @@ int main()
             search(studentCount);
             break;
         case 3:
-            addData(studentCount);
+            studentCount = addData(studentCount);
             break;
         case 4:
             printf("Exiting. . .");
@@ -171,7 +171,7 @@ void search(int studentCount)
 }
 
 // Function to add new students
-void addData(int studentCount)
+int addData(int studentCount)
 {
     student newRecord;
     printf("\nPlease enter the following details: \n\n");
@@ -209,10 +209,13 @@ void addData(int studentCount)
             system("stty cooked"); // switch terminal back to cooked mode
             getchar();
 
-            return; // Return without appending data
+            return 1; // Return without appending data
         }
     }
+    // increase count and add newRecord to the record array
+    record[studentCount] = newRecord;
     studentCount++;
+
     FILE *filePtr = fopen(FILE_NAME, "a");
     if (filePtr == NULL)
     {
@@ -240,8 +243,11 @@ void addData(int studentCount)
     getchar();             // read single character
     system("stty cooked"); // switch terminal back to cooked mode
     getchar();
+    return studentCount;
+
 }
 
+// Function to sort students by roll number
 void sort(int studentCount)
 {
     student tempRecord;
