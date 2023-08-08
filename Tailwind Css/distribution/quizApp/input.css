@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* custom class created */
+.btn{
+    @apply w-full bg-[#fff] text-[#222] font-semibold font-mono border-[1px] border-[#222] p-[8px] my-3 mx-0  text-xl text-left md:text-center rounded-lg cursor-pointer  md:hover:bg-[#222] md:hover:text-[#fff]
+}
+.correct{
+    @apply bg-green-300 text-green-950 border-green-950
+}
+.incorrect{
+    @apply bg-red-300 text-red-900 border-red-950
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- meta tags -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Mohammad Arsalan Rather">
+    <meta name="contact" content="arslanamin.org@gmail.com">
+    <meta name="description" content="This is a gym WorkoutQuiz webapp designed for practice. It has been designed by Mohammad Arsalan Rather aka Future Gen. This web page is designed using basic HTML CSS and JavaScript. ">
+    <meta name="keywords" content="HTML, CSS, JavaScript, BOOTSTRAP, font-awesome, FAQ, FREQUENTLY-ASKED-QUESTIONS, accordion,WorkoutQuiz,gym,WeGoGYM ,Future-Gen, Mr.Mohammad-Arsalan-Rather">
+    <!-- Title -->
+    <title>WorkoutQuiz - webApp</title>
+
+    <!-- TailwindCss link -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NavBar start -->
+    <nav class="flex justify-between bg-purple-900 p-3 text-white sticky top-0">
+
+        <div id="logo">
+            <a href="index.html" class="font-semibold font-mono text-3xl md:text-2xl">WeGoGYM</a>
+        </div>
+        
+        <div class="text-3xl font-bold cursor-pointer md:hidden absolute right-5" id="menu-icon" onclick="menu()">
+            <span> &#x2630</span>
+        </div>
+        
+        <ul class=" hidden absolute left-0 w-full z-[-1] bg-purple-900 text-lg mt-8 pl-5 font-serif pt-0 md:flex md:mt-0 md:static md:w-auto md:z-auto" id="navItems">
+            <li class="cursor-pointer text-xl hover:text-black hover:underline duration-300 mx-4 my-6 md:my-0"><a href="index.html">Home</a></li>
+            <li class="cursor-pointer text-xl hover:text-black hover:underline duration-300 mx-4 my-6 md:my-0"><a href="#">About</a></li>
+            <li class="cursor-pointer text-xl hover:text-black hover:underline duration-300 mx-4 my-6 md:my-0"><a href="https://instagram.com/_.arsl_an"> Mohammad Arsalan Rather</a></li>
+        </ul>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Main quiz container start -->
+    <main style="background-image: url(background.jpg);"  class="text-white bg-no-repeat bg-cover w-full h-screen flex  md:justify-center flex-col md:items-center" id="main">
+
+        <div class="w-full mt-5 md:w-[60%] bg-[rgba(255,255,255,0.15)] shadow-lg shadow-black rounded-xl text-black font-serif p-4" id="box">
+            <!-- Question -->
+            <h1 id="questionBox" class="text-2xl text-white md:text-2xl font-sans font-semibold">1) What is a dummy question?</h1>
+
+            <!-- Options -->
+        <div id="options">
+            <!-- btn custom css class created in input.css using @apply  -->
+            <!-- Option-1 -->
+                <button class="btn" id="option1">Option 1</button>
+            <!-- Option-2 -->
+                <button class="btn" id="option2">Option 2</button>
+            <!-- Option-3 -->
+                <button class="btn" id="option3">Option 3</button>            
+            <!-- Option-4 -->
+                <button class="btn" id="option3">Option 3</button>
+        </div>
+
+            <button class="bg-[#001e4d] text-lg text-[#fff] font-semibold w-[150px] p-[10px] m-t[20px] mb-0 mx-auto rounded-[4px] cursor-pointer block" id="nextBtn">Next</button>
+        </div>
+    </main>
+    
+    <!-- Script -->
+    <script src="app.js"></script>
+</body>
+</html>

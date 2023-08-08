@@ -1,0 +1,53 @@
+Create folder TAILWINDCss.
+Inside tailwindCss folder, create two more folders.
+One is distribution folder and another one is source folder.
+
+Distribution folder will hold final output files that we will upload on  server or give to production.
+Major work will be done in distribution folder.
+
+STEPS TO INITIALIZE TAILWIND CSS: 
+GO to TERMINAL AND TYPE COMMAND npx tailwindcss init (npx=node package executer, init= INITIALIZE);
+This command will create tailwind.config.js file
+
+imp=>visit tailwindcss ->TAILWIND CLI website all steps are mentioned to INITIALIZE.
+
+next command npx tailwindcss -i ./source/input.css -o ./distribution/style.css
+-i = input  -o = output
+- i ./location-of-input.css-file        -o ./location-in-distributionFolder-to-save-style.css
+
+style.css will be created and that will be generated automatically depending upon the class names given by user.
+
+-i ./source/input.css -o ./distribution/style.css => we have to run this command every time we change our class names
+
+But to avoid repetition we will simply run this command and css will be applied soon we save our file:
+     -i ./source/input.css -o ./distribution/style.css --watch 
+
+Edit tailwindcss.config.js => content: ["./distribution/*.html"]
+this will monitor our all the files that we will save in distribution folder.
+
+we have have to run this command every time will will create a new file.
+-i ./source/input.css -o ./distribution/newFolderName/style.css --watch 
+
+most important=> we can use one input.css for all our project files that we will create in distribution folder. But we will create separate input.css files for each project for better understatement.
+For more refer notebook notes.  
+
+
+
+
+@apply
+This is useful when you need to write custom CSS (like to override the styles in a third-party library) but still want to work with your design and use the same syntax you’re used to using in your HTML.
+
+>STEPS TO APPLY CUSTOM CSS CLASSES IN TAILWINDCSS:
+1). OPEN input.css file.
+2). inside input.css type:
+	@tailwind base;
+	@tailwind components;
+	@tailwind utilities;
+
+	.custom-className{
+		@apply flex justify-center items-center min-h-screen	//styling for that class
+	}
+
+	.custom-className2{
+		@apply bg-green-700 p-4 text-3xl text-white rounded-xl shadow-2xl	//styling for that class
+	}
