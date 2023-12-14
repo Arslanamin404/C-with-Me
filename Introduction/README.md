@@ -21,28 +21,28 @@ C language is a structured language that provides low-level access to computer m
  Execution: The operating system loads the executable program into memory and executes it.
 
 
-## Data types and variables are important concepts in programming that help us store and manipulate data in a program. 
+### Data types and variables are important concepts in programming that help us store and manipulate data in a program. 
   
-## A variable is a named storage location in a computer's memory that can hold a value. Think of it as a container where we can store and retrieve data. For example, we can create a variable called "age" to store someone's age. 
+### A variable is a named storage location in a computer's memory that can hold a value. Think of it as a container where we can store and retrieve data. For example, we can create a variable called "age" to store someone's age. 
   
-## A constant is a value that cannot be changed once it is defined. Think of it as a fixed value that we can use throughout the program. For example, we can define a constant called "PI" to represent the mathematical constant pi. 
+### A constant is a value that cannot be changed once it is defined. Think of it as a fixed value that we can use throughout the program. For example, we can define a constant called "PI" to represent the mathematical constant pi. 
   
-## Keywords are reserved words in C language that have a specific meaning and cannot be used as variable names or other identifiers in the program. Examples of keywords include "if", "else", "for", "while", and "int".
+### Keywords are reserved words in C language that have a specific meaning and cannot be used as variable names or other identifiers in the program. Examples of keywords include "if", "else", "for", "while", and "int".
 
 
-Operators and expressions are important concepts in programming that allow us to perform various operations and calculations in a program. 
+### Operators and expressions are important concepts in programming that allow us to perform various operations and calculations in a program. 
   
- An operator is a symbol that represents a specific operation, such as addition (+), subtraction (-), multiplication (*), or division (/). 
+### An operator is a symbol that represents a specific operation, such as addition (+), subtraction (-), multiplication (*), or division (/). 
   
- Unary operators operate on a single operand, such as the unary minus (-) operator which changes the sign of a number. 
+### Unary operators operate on a single operand, such as the unary minus (-) operator which changes the sign of a number. 
   
- Arithmetic operators are used for mathematical operations, such as addition (+), subtraction (-), multiplication (*), and division (/). 
+### Arithmetic operators are used for mathematical operations, such as addition (+), subtraction (-), multiplication (*), and division (/). 
   
- Logical operators are used to perform logical operations, such as AND (&&), OR (||), and NOT (!). 
+### Logical operators are used to perform logical operations, such as AND (&&), OR (||), and NOT (!). 
   
- Bitwise operators are used to perform bitwise operations, such as AND (&), OR (|), and XOR (^). 
+### Bitwise operators are used to perform bitwise operations, such as AND (&), OR (|), and XOR (^). 
   
- Assignment operators are used to assign a value to a variable, such as the equals (=) operator which assigns a value to a variable. 
+### Assignment operators are used to assign a value to a variable, such as the equals (=) operator which assigns a value to a variable. 
   
 ### Ternary operator is a conditional operator that takes three operands and evaluates a condition. For example, the ternary operator (condition ? expression1 : expression2) can be used to assign a value to a variable based on a condition. 
   
