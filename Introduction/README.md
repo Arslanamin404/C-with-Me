@@ -1,8 +1,8 @@
-#INTRODUCTION TO C LANGUAGE 
+# INTRODUCTION TO C LANGUAGE 
 C language is a general-purpose programming language that was developed in 1972 by Dennis Ritchie at Bell Labs. It is a procedural language that has been widely used for system programming, embedded systems, and application programming. 
 C language is a structured language that provides low-level access to computer memory and has features for high-level programming as well. 
   
-#**Features of C language:**
+# **Features of C language:**
   
  Portability: C programs can be compiled and executed on different platforms with minimal changes. 
  Efficiency: C language provides direct access to system resources, allowing for efficient programming. 
